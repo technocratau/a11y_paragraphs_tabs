@@ -1,0 +1,39 @@
+<?php
+
+ /**
+  * @file
+  * Module for creating the accordion.
+  */
+
+/**
+ * Implements hook_theme().
+ *
+ * Call the base hook from Paragraphs to allow preprocess hooks to work.
+ */
+function a11y_paragraphs_tabs_theme() {
+  return [
+    'paragraph__a11y_paragraphs_tabs_wrapper' => [
+      'render element' => 'element',
+      'template' => 'paragraph--a11y-paragraphs-tabs-wrapper',
+      'base hook' => 'paragraph',
+    ],
+
+    'field__field_a11y_para_tabs_tabs_panel' => [
+      'render element' => 'content',
+      'template' => 'field--field-a11y-para-tabs-tabs-panel',
+      'base hook' => 'field',
+    ],
+
+  ];
+}
+
+/**
+ * Implements hook_page_attachments().
+ *
+ * Attach CSS/JS libs.
+ */
+function a11y_paragraphs_tabs_page_attachments(array &$page) {
+  $page['#attached']['library'][] = 'a11y_paragraphs_tabs/assets';
+  $page['#attached']['library'][] = 'a11y_paragraphs_tabs/a11y-accordion-tabs';
+
+}
