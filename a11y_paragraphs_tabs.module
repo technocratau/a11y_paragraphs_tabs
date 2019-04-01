@@ -1,9 +1,9 @@
 <?php
  
- /**
-  * @file
-  * Module for creating the A11Y Paragraphs Tabs paragraph component.
-  */
+/**
+ * @file
+ * Module for creating the A11Y Paragraphs Tabs paragraph component.
+ */
 
 /**
  * Implements hook_theme().
