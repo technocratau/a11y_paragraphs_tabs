@@ -12,9 +12,9 @@ CONTENTS OF THIS FILE
 INTRODUCTION
 --------------------------------------------------------------------------------
 
-A11Y Paragraphs Tabs gives the user the ability to easily add tabs via paragraphs
-to their content that complies to Accessibility (A11Y) standards and on mobile
-the tabs changes to an accordion.
+A11Y Paragraphs Tabs gives the user the ability to easily add tabs via
+paragraphs to their content that complies to Accessibility (A11Y) standards
+and on mobile the tabs changes to an accordion.
 
 This module creates 3 new paragraphs namely:
 - A11Y Paragraphs Tabs Wrapper
@@ -22,9 +22,9 @@ This module creates 3 new paragraphs namely:
 - A11Y Paragraphs Tabs Content
 
 The wrapper (A11Y Paragraphs Tabs Wrapper) contains the tab panel
-(A11Y Paragraphs Tabs Panel) of which you can add as many tabs as you need. In turn,
-the tabs panel (A11Y Paragraphs Tabs Panel) contains a paragraph in which you can
-add the paragraphs you would like to use inside the tab panel.
+(A11Y Paragraphs Tabs Panel) of which you can add as many tabs as you need.
+In turn, the tabs panel (A11Y Paragraphs Tabs Panel) contains a paragraph in
+which you can add the paragraphs you would like to use inside the tab panel.
 
 A11Y Paragraphs Tabs uses Matthias Ott's A11Y Accordion Tabs js:
 https://github.com/matthiasott/a11y-accordion-tabs
