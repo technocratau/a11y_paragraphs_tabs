@@ -4,19 +4,19 @@
  */
 
 .a11y-paragraphs-tabs__wrapper {
-	position: relative;
-	display: block;
+  position: relative;
+  display: block;
 }
 
 .a11y-paragraphs-tabs__wrapper .tabs-tab-list {
-	display: flex;
+  display: flex;
   list-style: none;
   margin: 0;
   padding: 0;
 }
 
 .a11y-paragraphs-tabs__wrapper .tabs-tab-list li {
-	margin: 0;
+  margin: 0;
 }
 
 /* Individual Tab Styling */
@@ -92,7 +92,7 @@
 
 /* Accordion item Active State */
 .a11y-paragraphs-tabs__wrapper .accordeon-trigger[aria-expanded="true"] {
-	background-color: #ededed;
+  background-color: #ededed;
 }
 
 .a11y-paragraphs-tabs__wrapper .accordeon-trigger-icon {
