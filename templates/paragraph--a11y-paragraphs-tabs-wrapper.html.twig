@@ -41,6 +41,10 @@
  */
 #}
 
+{# Attach CSS/JS Libraries #}
+{{ attach_library('a11y_paragraphs_tabs/assets') }}
+{{ attach_library('a11y_paragraphs_tabs/a11y-accordion-tabs') }}
+
 {# Sets Unique ID for Accordion from Paragraph ID. #}
 {% set section_id = 'section' ~ paragraph.id.value %}
 {% set tab_id = 'tab' ~ paragraph.id.value %}

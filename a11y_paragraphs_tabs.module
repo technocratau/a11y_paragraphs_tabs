@@ -28,17 +28,6 @@ function a11y_paragraphs_tabs_theme() {
 }
 
 /**
- * Implements hook_page_attachments().
- *
- * Attach CSS/JS libs.
- */
-function a11y_paragraphs_tabs_page_attachments(array &$page) {
-  $page['#attached']['library'][] = 'a11y_paragraphs_tabs/assets';
-  $page['#attached']['library'][] = 'a11y_paragraphs_tabs/a11y-accordion-tabs';
-
-}
-
-/**
  * Implements hook_help().
  */
 function a11y_paragraphs_tabs_help($route_name) {
