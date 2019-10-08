@@ -14,7 +14,7 @@ function a11y_paragraphs_tabs_requirements($phase) {
   }
 
   if (function_exists('libraries_get_path')) {
-    $path = libraries_get_path('a11y-accordion-tabs') . '/a11y-accordion-tabs/a11y-accordion-tabs.js';
+    $path = libraries_get_path('a11y-accordion-tabs') . '/a11y-accordion-tabs.js';
   }
   else {
     $path = DRUPAL_ROOT . '/libraries/a11y-accordion-tabs/a11y-accordion-tabs.js';
