@@ -85,4 +85,5 @@ Click Save Settings.
 
 MAINTAINERS
 --------------------------------------------------------------------------------
-A11Y Paragraphs Tabs - Hennie Martens
+Hennie Martens - https://www.drupal.org/u/hmartens
+Barry Baeta - https://www.drupal.org/u/fallen8908
