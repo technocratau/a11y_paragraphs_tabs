@@ -36,14 +36,13 @@
  * - logged_in: Flag for authenticated user status. Will be true when the
  *   current user is a logged-in member.
  * - is_admin: Flag for admin user status. Will be true when the current user
- *   is an administrator. 
+ *   is an administrator.
  *
  */
 #}
 
 {# Attach CSS/JS Libraries #}
 {{ attach_library('a11y_paragraphs_tabs/assets') }}
-{{ attach_library('a11y_paragraphs_tabs/a11y-accordion-tabs') }}
 
 {# Sets Unique ID for Accordion from Paragraph ID. #}
 {% set section_id = 'section' ~ paragraph.id.value %}
@@ -59,7 +58,7 @@
   		<div class="a11y-paragraphs-tabs__section-container">
 
 			  <div class="accordion-tabs js-tabs">
-		    	
+
           <ul role="tablist" class="tabs-tab-list">
 
             {# Loops through the tab sections to print the tab section titles. #}
@@ -68,19 +67,19 @@
               <li role="presentation">
                 <a href="#{{ section_id }}-{{ key + 1 }}" role="tab" id="{{ tab_id }}-{{ key + 1 }}" aria-controls="{{ section_id }}-{{ key + 1 }}" aria-selected="true" class="tabs-trigger js-tabs-trigger">{{ item['#paragraph'].field_a11y_para_tabs_tab_title.value }}</a>
               </li>
-            
+
             {% endfor %}
-          
+
           </ul>
 
           <div>
-          
+
             {# Loops through the tab sections again to print the tab section bodies. #}
             {% for key, item in content.field_a11y_para_tabs_tabs_panel if key|first != '#' %}
 
               <section id="{{ section_id }}-{{ key + 1 }}" role="tabpanel" aria-labelledby="{{ tab_id }}-{{ key + 1 }}" class="tabs-panel js-tabs-panel" tabindex="0">
 
-                <div class="accordeon-trigger js-accordeon-trigger" aria-controls="{{ section_id }}-{{ key + 1 }}" aria-expanded="true" tabindex="0">
+                <div class="accordeon-trigger js-accordeon-trigger accordion-trigger js-accordion-trigger" aria-controls="{{ section_id }}-{{ key + 1 }}" aria-expanded="true" tabindex="0">
                   {{ item['#paragraph'].field_a11y_para_tabs_tab_title.value }}
                 </div>
 
@@ -92,28 +91,28 @@
                     {% set section_body = item %}
 
                     {% set lang = section_body['#paragraph'].langcode[0].value %}
-                  
+
                     {# Check if a translation exists #}
                     {% if section_body['#paragraph'].field_a11y_para_tabs_tab_content[body_key].entity.hasTranslation(lang) %}
 
                       {# Load the entity for the current translation #}
                       {% set section_translation= section_body['#paragraph'].field_a11y_para_tabs_tab_content[body_key].entity.getTranslation(lang) %}
-                  
+
                     {% else %}
-                    
+
                       {# Load the source entity #}
                       {% set section_translation= section_body['#paragraph'].field_a11y_para_tabs_tab_content[body_key].entity %}
 
                     {% endif %}
 
                     {% set section_body = section_body|merge({'#paragraph': section_translation}) %}
-                  
+
                     {# Remove the cache keys so it doesn't repeat the first value. #}
                     {% set section_body = section_body|merge({'#cache': {}}) %}
-                  
+
                     {# Print the compiled section body. #}
                     {{ section_body }}
-                  
+
                   {% endfor %}
 
                 </div>

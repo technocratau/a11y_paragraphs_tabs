@@ -5,6 +5,9 @@ assets:
   css:
     theme:
       css/a11y-paragraphs-tabs.css: {}
+  dependencies:
+    - core/jquery
+    - core/jquery.once
 
 a11y-accordion-tabs:
   remote: https://github.com/matthiasott/a11y-accordion-tabs

@@ -82,6 +82,7 @@
 }
 
 /* Accordion item */
+.a11y-paragraphs-tabs__wrapper .accordion-trigger,
 .a11y-paragraphs-tabs__wrapper .accordeon-trigger {
   display: flex;
   align-items: center;
@@ -91,16 +92,19 @@
 }
 
 /* Accordion item Active State */
+.a11y-paragraphs-tabs__wrapper .accordion-trigger[aria-expanded="true"],
 .a11y-paragraphs-tabs__wrapper .accordeon-trigger[aria-expanded="true"] {
   background-color: #ededed;
 }
 
+.a11y-paragraphs-tabs__wrapper .accordion-trigger-icon,
 .a11y-paragraphs-tabs__wrapper .accordeon-trigger-icon {
   pointer-events: none;
 }
 
 /* Makes the accordions tabs on ipad and above */
 @media (min-width: 768px) {
+  .a11y-paragraphs-tabs__wrapper .tabs-allowed .accordion-trigger,
   .a11y-paragraphs-tabs__wrapper .tabs-allowed .accordeon-trigger {
     display: none;
   }
@@ -121,6 +125,7 @@
   }
 }
 
+.a11y-paragraphs-tabs__wrapper .accordion-trigger-icon,
 .a11y-paragraphs-tabs__wrapper .accordeon-trigger-icon {
   display: inline-block;
   float: right;
@@ -128,6 +133,7 @@
   height: 22px;
 }
 
+.a11y-paragraphs-tabs__wrapper .accordion-trigger-icon svg,
 .a11y-paragraphs-tabs__wrapper .accordeon-trigger-icon svg {
   margin: 0;
 }
